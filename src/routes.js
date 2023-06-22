@@ -1,3 +1,4 @@
+/* eslint-disable new-cap */
 import { Router } from 'express';
 import multer from 'multer';
 import uploadConfig from './config/upload';
@@ -17,7 +18,7 @@ routes.get('/houses', HouseController.index);
 routes.put('/houses/:house_id', upload.single('thumbnail'), HouseController.update);
 routes.delete('/houses', HouseController.destroy);
 
-routes.get('/dashboard', DashboardController.show)
+routes.get('/dashboard', DashboardController.show);
 
 routes.post('/houses/:house_id/reserve', ReserveController.store);
 routes.get('/reserves', ReserveController.index);
